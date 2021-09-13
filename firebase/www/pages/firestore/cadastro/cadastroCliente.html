@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema - Cliente</title>
+    <link rel="stylesheet" href="../../../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../css/estilo.css">
+    <script src="../../../cordova.js"></script>
+    <script src="../../../js/jquery.js"></script>
+    <script src="../../../bootstrap/js/bootstrap.js"></script>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+
+		<script src="../../../js/firebase.js"></script>
+		<script src="../../../js/cadastro.js"></script>
+</head>
+<body>
+    <div class="container" align="center">
+      <div class="row" id="top">
+        <div id="menubar" class="col-12" >
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="../../../index.html">Sistema</a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Cadastrar
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="cadastroCliente.html">Clientes</a></li>
+                              <li><a class="dropdown-item" href="cadastroFuncinario.html">Funcionários</a></li>
+                              <li><a class="dropdown-item" href="cadastroFornecedor.html">Fornecedores</a></li>
+                            </ul>
+                          </li> <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Consultar
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="../consulta/consultaCliente.html">Clientes</a></li>
+                              <li><a class="dropdown-item" href="../consulta/consultaFuncionario.html">Funcionários</a></li>
+                              <li><a class="dropdown-item" href="../consulta/consultaFornecedor.html">Fornecedores</a></li>
+                            </ul>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Editar
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="../edicao/editarCliente.html">Clientes</a></li>
+                              <li><a class="dropdown-item" href="../edicao/editarFuncionario.html">Funcionários</a></li>
+                              <li><a class="dropdown-item" href="../edicao/editarFornecedor.html">Fornecedores</a></li>
+                            </ul>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Excluir
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="../excluir/excluirCliente.html">Clientes</a></li>
+                              <li><a class="dropdown-item" href="../excluir/excluirFuncionario.html">Funcionários</a></li>
+                              <li><a class="dropdown-item" href="../excluir/excluirFornecedor.html">Fornecedores</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+            </div>
+        </div>
+        <div class="row" id="cadastro">
+          <div class="mb-1 col-sm-12">
+            <h2 id="h1cadastro">Cadastrar - Cadastramento de Potenciais Clientes</h2>
+            <h5 id="h1cadastro">Sistema utilizado para agendamento de serviço</h5>
+          </div>
+          <div id="formText" class="col-sm-12">
+              <form>
+                <div class="mb-2 row" id="name">
+                  <label for="nameInput" class="col-sm-3 col-form-label">Nome:</label>
+                </div>
+                <div class="row">
+                  <div class="mb-2 col-sm-12">
+                    <input type="text" class="form-control" id="nameInput">
+                  </div>
+                </div>
+                <div class="mb-2 row">
+                  <label for="adressInput" class="col-sm-3 col-form-label">Telefone:</label>
+                </div>
+                <div class="row">
+                  <div class="mb-2 col-sm-12">
+                    <input type="text" class="form-control" id="adressInput" placeholder="(xx)xxxxx-xxxx">
+                  </div>
+                </div>
+                <div class="mb-2 row">
+                  <label for="stateInput" class="col-sm-3 col-form-label">Origem:</label>
+                </div>
+                <div class="row">
+                  <div class="mb-2 col-sm-4">
+                    <select class="form-select" id="stateInput" aria-label="Default select example">
+                      <option selected>Selecione</option>
+                      <option value="Celular">Celular</option>
+                      <option value="Email">Email</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-2 row">
+                  <label for="dateInput" class="col-sm-3 col-form-label" placeholder="dd/mm/aaaa">Data de Contato:</label>
+                </div>
+                <div class="row">
+                  <div class="mb-2 col-sm-12">
+                    <input type="text" class="form-control" id="dateInput">
+                  </div>
+                </div>
+                <div class="mb-2 row">
+                  <label for="obsInput" class="col-sm-3 col-form-label">Observação:</label>
+                </div>
+                <div class="row">
+                  <div class="mb-2 col-sm-12">
+                    <textarea class="form-control" aria-label="With textarea" id="obsInput"></textarea>
+                  </div>
+                </div>
+              </form>
+              <div class="mb-2 col-sm-2 row">
+                <button id="btnInsert" type="submit" class="btn btn-primary col-auto">Cadastrar</button>
+              </div>
+          </div>
+        </div>
+    </div>
+</body>
+</html>

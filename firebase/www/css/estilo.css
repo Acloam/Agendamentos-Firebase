@@ -1,0 +1,54 @@
+body{
+    background-color: #cccccc;
+}
+#menubar{
+    height: 70px;
+    background-color: #f3f3f3;
+}
+#banner{
+    height: 480px;
+    background-color: #f3f3f3;
+}
+#card1{
+    height: 230px;
+    background-color: #f3f3f3;
+}
+#card2{
+    height: 230px;
+    background-color: #f3f3f3;
+}
+#card3{
+    height: 230px;
+    background-color: #f3f3f3;
+}
+#cadastro{
+    height: 640px;
+    background-color: #f3f3f3;
+}
+#formText{
+    height: 500px;
+}
+#formFields{
+    height: 500px;
+}
+#consulta{
+    height: 400;
+    background-color: #f3f3f3;
+}
+#middletop{
+    height: 110px;
+    background-color: #f3f3f3;
+}
+#searchText{
+    height: 35px;
+}
+#searchImput{
+    height: 35px;
+}
+#edit{
+    height: 630px;
+    background-color: #f3f3f3;
+}
+#h1cadastro{
+    text-align: left;
+}

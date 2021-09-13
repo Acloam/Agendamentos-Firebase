@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema</title>
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/estilo.css">
+    <script src="../../js/jquery.js"></script>
+    <script src="../../bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+    <div class="container" align="center">
+      <div class="row" id="top">
+        <div id="menubar" class="col-12" >
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="../index.html">Sistema</a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Cadastrar
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="cadastroCliente.html">Clientes</a></li>
+                              <li><a class="dropdown-item" href="cadastroFuncinario.html">Funcionários</a></li>
+                              <li><a class="dropdown-item" href="cadastroFornecedor.html">Fornecedores</a></li>
+                            </ul>
+                          </li> <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Consultar
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="../consulta/consultaCliente.html">Clientes</a></li>
+                              <li><a class="dropdown-item" href="../consulta/consultaFuncionario.html">Funcionários</a></li>
+                              <li><a class="dropdown-item" href="../consulta/consultaFornecedor.html">Fornecedores</a></li>
+                            </ul>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Editar
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="../edicao/editarCliente.html">Clientes</a></li>
+                              <li><a class="dropdown-item" href="../edicao/editarFuncionario.html">Funcionários</a></li>
+                              <li><a class="dropdown-item" href="../edicao/editarFornecedor.html">Fornecedores</a></li>
+                            </ul>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Excluir
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="../excluir/excluirCliente.html">Clientes</a></li>
+                              <li><a class="dropdown-item" href="../excluir/excluirFuncionario.html">Funcionários</a></li>
+                              <li><a class="dropdown-item" href="../excluir/excluirFornecedor.html">Fornecedores</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+            </div>
+        </div>
+        <div class="row" id="cadastro">
+            <div class="mb-3">
+              <h1 id="h1cadastro">Cadastro de Funcionário</h1>
+            </div>
+            <div id="formText" class="col-sm-2">
+                <form>
+                  <div class="mb-3 row" id="name">
+                    <label for="nameImput" class="col-sm-1 col-form-label">Nome:</label>
+                  </div>
+                  <div class="mb-3 row">
+                    <label for="adressImput" class="col-sm-1 col-form-label">Endereço:</label>
+                  </div>
+                  <div class="mb-3 row">
+                    <label for="bairroImput" class="col-sm-1 col-form-label">Bairro:</label>
+                  </div>
+                  <div class="mb-3 row">
+                    <label for="cepImput" class="col-sm-1 col-form-label">CEP:</label>
+                  </div>
+                  <div class="mb-5 row">
+                    <label for="stateImput" class="col-sm-1 col-form-label">Estado:</label>
+                  </div>
+                  <div class="mb-3 row">
+                    <label for="flexRadioDefault" class="col-sm-1">Sexo:</label>
+                  </div>
+                </form>
+            </div>
+              <div id="formFields" class="col-sm-10">
+                <form>
+                  <div class="row">
+                    <div class="mb-3 col-sm-12">
+                      <input type="text" class="form-control" id="nameImput">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="mb-3 col-sm-12">
+                      <input type="text" class="form-control" id="adressImput">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="mb-3 col-sm-4">
+                      <input type="text" class="form-control" id="bairroImput">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="mb-3 col-sm-4">
+                      <input type="text" class="form-control" id="cepImput">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="mb-3 col-sm-4">
+                      <select class="form-select" id="stateImput" aria-label="Default select example">
+                        <option selected>Selecione</option>
+                        <option value="1">Acre (AC)</option>
+                        <option value="2">Alagoas (AL)</option>
+                        <option value="3">Amapá (AP)</option>
+                        <option value="4">Amazonas (AM)</option>
+                        <option value="5">Bahia (BA)</option>
+                        <option value="6">Ceará (CE)</option>
+                        <option value="7">Distrito Federal (DF)</option>
+                        <option value="8">Espírito Santo (ES)</option>
+                        <option value="9">Goiás (GO)</option>
+                        <option value="10">Maranhão (MA)</option>
+                        <option value="11">Mato Grosso (MT)</option>
+                        <option value="12">Mato Grosso do Sul (MS)</option>
+                        <option value="13">Minas Gerais (MG)</option>
+                        <option value="14">Pará (PA)</option>
+                        <option value="15">Paraíba (PB)</option>
+                        <option value="16">Paraná (PR)</option>
+                        <option value="17">Pernambuco (PE)</option>
+                        <option value="18">Piauí (PI)</option>
+                        <option value="19">Rio de Janeiro (RJ)</option>
+                        <option value="20">Rio Grande do Norte (RN)</option>
+                        <option value="21">Rio Grande do Sul (RS)</option>
+                        <option value="22">Rondônia (RO)</option>
+                        <option value="23">Roraima (RR)</option>
+                        <option value="24">Santa Catarina (SC)</option>
+                        <option value="25">São Paulo (SP)</option>
+                        <option value="26">Sergipe (SE)</option>
+                        <option value="27">Tocantins (TO)</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="mb-1 row">
+                    <div class="col-sm-1 form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Homem
+                      </label>
+                    </div>
+                  </div>
+                  <div class="mb-1 row">
+                    <div class="col-sm-1 form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Mulher
+                      </label>
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <div class="col-sm-1 form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Outro
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <div class="col-auto form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">Todos os campos estão devidamente preenchidos</label>
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <button type="submit" class="btn btn-primary col-auto">Cadastrar</button>
+                </div>
+                </form>
+              </div>
+          </div>
+    </div>
+</body>
+</html>

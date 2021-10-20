@@ -29,6 +29,7 @@ var app = {
         })
         .then((docRef) => {
             console.log("Document written with ID: ", docRef.id);
+            document.location = "../consulta/consulta"+collection+".html";
         })
         .catch((error) => {
             console.error("Error adding document: ", error);
